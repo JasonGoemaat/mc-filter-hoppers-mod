@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "filter-hoppers-mod",
+	"version": "${version}",
+	"name": "Filter Hoppers Mod",
+	"description": "Hoppers that filter items and transfer faster",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/filter-hoppers-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.goemaat.filterhoppers.FilterHoppersMod"
+		],
+		"client": [
+			"com.goemaat.filterhoppers.FilterHoppersModClient"
+		],
+		"fabric-datagen": [
+			"com.goemaat.filterhoppers.FilterHoppersModDataGenerator"
+		]
+	},
+	"mixins": [
+		"filter-hoppers-mod.mixins.json",
+		{
+			"config": "filter-hoppers-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
